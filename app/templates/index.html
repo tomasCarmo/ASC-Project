@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>CSA Dashboard</title>
+<head>
+        <meta charset="utf-8" />
+        <title>AppEngine CSA</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h1>Cloud Computing Dashboard</h1>
+
+<a href="https://127.0.0.1:8080/cdn/lb/ip">Get Load Balancer IP</a>
+
+<h2>Get Image</h2>
+    <form action="/get-image" method="get">
+        <input type="text" name="image_path" placeholder="Enter image path">
+        <input type="submit" value="Search">
+    </form>
+
+    <h2>Get Video</h2>
+    <form action="/get-video" method="get">
+        <input type="text" name="video_path" placeholder="Enter video path">
+        <input type="submit" value="Search">
+    </form>
+
+    <h2>Upload Image</h2>
+    <form action="/upload-image" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    <h2>Delete Image</h2>
+    <form action="/delete-image" method="post">
+        <input type="text" name="image_path" placeholder="Enter image path">
+        <input type="submit" value="Delete">
+    </form>
+
+    <h2>Upload Video</h2>
+    <form action="/upload-video" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    <h2>Delete Video</h2>
+    <form action="/delete-video" method="post">
+        <input type="text" name="video_path" placeholder="Enter video path">
+        <input type="submit" value="Delete">
+    </form>
+
+</body>
+</html>
